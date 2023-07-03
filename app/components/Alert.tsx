@@ -58,7 +58,7 @@ const Alert: FC<AlertProps> = ({ variant = 'info', children }) => {
 
     // Render the alert if it's visible, otherwise return null.
     return show ? (
-        <div id="alert-banner" tabIndex="-1" className={`fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 ${container} border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600`}>
+        <div id="alert-banner" tabIndex={-1} className={`fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 ${container} border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600`}>
             <div className="flex flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0">
                 <div className={`flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0 dark:border-gray-600 ${inner}`}>
                 <span className={`${badge} flex rounded-full uppercase px-2 py-1 text-xs font-bold mr-3`}>{variant.toUpperCase()}</span>
