@@ -8,12 +8,16 @@ const useDownloadVideo = () => {
     setDownloading(true);
 
     try {
-      setDownloaded(true);
+      setTimeout(() => {
+        setDownloaded(true);
+        setDownloading(false);
+      }, 2500);
     } catch (error) {
       console.error("There was an error with the fetch operation: ", error);
+      setDownloading(false);
     }
 
-    setDownloading(false);
+    // setDownloading(false);
   }
 
   return { downloading, downloaded, downloadVideo, setDownloaded };

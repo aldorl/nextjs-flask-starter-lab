@@ -23,7 +23,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             ref={ref}
             disabled={disabled}
             type={type}
-            className={`${className} ${variant} ${size} ${pill ? 'pill' : ''} active:bg-button-active`}
+            className={`${className} ${variant} ${size} ${pill ? 'pill' : ''} ${disabled ? 'bg-gray-300 hover:bg-gray-500 cursor-not-allowed' : 'active:bg-button-active'}`}
             {...props}
         >
             {children}
