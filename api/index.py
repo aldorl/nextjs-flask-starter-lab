@@ -8,6 +8,6 @@ CORS(app)
 def hello_world():
     return "<p>Hello, World!</p>"
 
-@app.route('/generate_video', methods=['POST'])
+@app.route('/api/generate_video', methods=['POST'])
 def generate_video():
     return send_file('python_module/generated/final_image.png', mimetype='image/png')

@@ -8,7 +8,7 @@ const useDownloadVideo = () => {
     setDownloading(true);
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}:5328/generate_video`, { method: 'POST' });
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}:5328/api/generate_video`, { method: 'POST' });
       const resBlob = await res.blob();
   
       let blob = new Blob([resBlob], {type: "application/octet-stream"});
