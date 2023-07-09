@@ -10,4 +10,5 @@ def hello_world():
 
 @app.route('/api/generate_video', methods=['POST'])
 def generate_video():
+    # NOTE: currently only sending image as a test, eventually video will be sent
     return send_file('python_module/generated/final_image.png', mimetype='image/png')
