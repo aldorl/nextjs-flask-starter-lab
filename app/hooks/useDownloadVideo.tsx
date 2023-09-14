@@ -16,8 +16,8 @@ const useDownloadVideo = () => {
       let downloadUrl = window.URL.createObjectURL(blob);
       let a = document.createElement("a");
       a.href = downloadUrl;
-      // a.download = "your_video_name.mp4";
-      a.download = "your_image_name.png";
+      a.download = "your_video_name.mp4";
+      // a.download = "your_image_name.png";
       document.body.appendChild(a);
       a.click();
       URL.revokeObjectURL(downloadUrl);
